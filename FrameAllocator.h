@@ -52,14 +52,13 @@ private:
     
     std::vector<uint8_t> memory;
     
-    void store_in_memory8(uint8_t value, uint32_t address);
-    void store_in_memory32(uint32_t value, uint32_t address);
-    void load_from_memory8(uint8_t &value, uint32_t address) const;
-    void load_from_memory32(uint32_t &value, uint32_t address) const;
+    void store_in_memory(uint32_t value, uint32_t address);
+    void load_from_memory(uint32_t &value, uint32_t address) const;
     
     void set_frames_avaliable(uint32_t value);
     void set_frame_pointer(uint32_t value, uint32_t address);
-    void get_head(uint32_t &value);
+    void get_head(uint32_t &value) const;
+    void set_head(uint32_t &value);
     
     void print_memory(uint32_t start_address, uint32_t end_address) const;
 
