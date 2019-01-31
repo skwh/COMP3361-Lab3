@@ -70,12 +70,14 @@ bool FrameAllocator::release(uint32_t count, std::vector<uint32_t> &page_frames)
     }
     uint32_t end_address;
     get_head(end_address);
-    while (page_frames.size() != 0) {
+    int address_count = count;
+    while (address_count > 0) {
         uint32_t new_frame = page_frames.back();
         set_frame_pointer(end_address, new_frame);
         end_address = new_frame;
         set_head(end_address);
         page_frames.pop_back();
+        address_count--;
     }
     set_frames_avaliable(get_avaliable() + count);
     return true;
