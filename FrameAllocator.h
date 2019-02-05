@@ -121,7 +121,7 @@ private:
     void get_head(uint32_t &value) const; 
     /**
      * Sets the head value to the given value
-     * @param value: value the head shpuld be set to
+     * @param value: value the head should be set to
      */
     void set_head(uint32_t &value);
     
