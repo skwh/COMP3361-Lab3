@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: evan
+ * Author: Evan Derby & Jason Ghiglieri
  *
  * Created on January 28, 2019, 5:19 PM
  */
